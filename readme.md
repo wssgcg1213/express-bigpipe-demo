@@ -8,22 +8,18 @@ express' bigpipe Middleware.
 	
 本中间件的 namespace 在 res.bigpipe 下, 所有方法都支持链式调用, 输出完成后自动触发```res.end()```结束请求.
 
-----
 
-```write(str);```
+####```write(str);```
 
 直接输出
 
-----
 
-```pagelet(file, errHandler);```
+####```pagelet(file, errHandler);```
 
 读取basedir下的file文件, 第二个参数为错误处理回调, 传入参数err
 
-----
 
-	
-```render(view, renderObj, callback);```
+####```render(view, renderObj, callback);```
 
 使用模板引擎读取模板目录下模板, renderObj 为渲染的数据, callback回调采用尾触发, 传入一个参数assign, 在callback中异步获取到数据之后使用assign(obj) 将数据合并入renderObj并渲染输出.
 
@@ -33,9 +29,9 @@ express' bigpipe Middleware.
 
 ```render(view, callback);```
 
-----
-```done(fn);```
-```done(str);```
+
+
+####```done(fn);```, ```done(str);```
 
 提前结束, 相当于 res.end , 可以传入 String 直接输出, 或者回调函数在 res.end 之前执行.
 
