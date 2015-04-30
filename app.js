@@ -5,7 +5,7 @@ var express = require('express');
     bodyParser = require('body-parser'),
 
     routes = require('./routes/index'),
-    bigpipe = require('./bigpipe'),
+    pipebig = require('./pipebig'),
     app = express();
 
 // view engine setup
@@ -16,7 +16,9 @@ app.use(favicon());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bigpipe);
+app.use(pipebig({
+    basedir: __dirname + '/public/'
+}));
 app.use('/', routes);
 
 /// catch 404 and forward to error handler
