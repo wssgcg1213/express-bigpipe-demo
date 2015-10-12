@@ -37,7 +37,7 @@ express' bigpipe Middleware.
 
 ###demo:
 
-```
+```javascript
 var app = require('express')(),
 	bigpipe = require('./bigpipe');
 	
@@ -79,4 +79,6 @@ app.get("/", function(req, res){
 
 
 
-byLing created @ 2015年04月29日21:10:36
+by Ling created @ 2015年04月29日21:10:36  
+mailto i@zeroling.com  
+[zeroling.com](zeroling.com)
