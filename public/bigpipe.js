@@ -1,8 +1,8 @@
 /**
  * Created by Liuchenling on 4/29/15.
  */
-function Bigpipe (sec, cont){
-    document.querySelector(sec).innerHTML = cont;
+function __bigpipe_call__ ( message){
+    document.querySelector('#container').innerHTML += message;
 }
 
 console.log('bigpipe.js loaded');

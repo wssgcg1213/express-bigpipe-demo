@@ -1,4 +1,1 @@
-/**
- * Created by Liuchenling on 4/30/15.
- */
-console.log('this is a pagelet');
+__bigpipe_call__('<h2>This is append by pagelet.eg.js</h2>')

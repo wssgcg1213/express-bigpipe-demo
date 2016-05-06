@@ -3,9 +3,8 @@ var express = require('express');
     favicon = require('static-favicon'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-
     routes = require('./routes/index'),
-    pipebig = require('./pipebig'),
+    pipebig = require('express-middleware-bigpipe'),
     app = express();
 
 // view engine setup
@@ -46,11 +45,11 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    //res.render('error', {
-    //    message: err.message,
-    //    error: {}
-    //});
-    res.end(JSON.stringify(err))
+    try {
+        res.end(JSON.stringify(err))
+    } catch (e) {
+        res.end()
+    }
 });
 
 
