@@ -1,6 +1,8 @@
 #Express-bigpipe-demo
 -------
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wssgcg1213/express-bigpipe-demo.svg)](https://greenkeeper.io/)
+
 这是一个 [express-middleware-bigpipe](https://github.com/wssgcg1213/express-middleware-bigpipe) 的 demo 
 
 this is a demo of  [express-middleware-bigpipe](https://github.com/wssgcg1213/express-middleware-bigpipe)
